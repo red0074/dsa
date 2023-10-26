@@ -10,24 +10,46 @@ public class Basicarrays {
         for (int i = 0; i < a.length; i++)
             a[i] = sc.nextInt();
         // traversing using for loop
+        System.out.println("printing the elements:");
         print(a);
         // traversing using while loop
+        System.out.println("printing reverse of the array: ");
         printreverse(a);
         // traversing using for each loop
+        System.out.println("sum of the array:");
         sum(a);
+        System.out.println("max element in the array:");
         maxele(a);
+        System.out.println("min element in the array:");
         minele(a);
         int find = sc.nextInt();
+        System.out.println("finding the given element:");
         search(a, find);
+        // shallow copying
+        System.out.println("copying the elements using call by reference");
+        copyarray(a);
+        // deep opying
+        System.out.println("copying the elements using clone method:");
+        copyarr(a);
+        // count the number of occurence of element
+        int k = sc.nextInt();
+        System.out.println("find the occurence of an element:");
+        count(a, k);
+        System.out.println("removing the duplicate elements:");
         int n = removeduplicate(a);
         for (int x = 0; x < n; x++)
             System.out.print(a[x] + " ");
         System.out.println();
-        // shallow copying
-        copyarray(a);
-        // deep opying
-        copyarr(a);
         sc.close();
+    }
+
+    public static void count(int a[], int k) {
+        int co = 0;
+        for (int ele : a) {
+            if (ele == k)
+                co++;
+        }
+        System.out.println(co);
     }
 
     public static void copyarr(int a[]) {
