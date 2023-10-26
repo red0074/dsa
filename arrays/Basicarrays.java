@@ -39,12 +39,41 @@ public class Basicarrays {
         System.out.println("finding the last occurence of the element in the array:");
         int ele = sc.nextInt();
         lastocc(a, ele);
+        // count the numbers strictly greater than x
+        System.out.println("counting the elements greter than x:");
+        int find1 = sc.nextInt();
+        countgtx(a, find1);
+        // check whether given array is sorted or not
+        System.out.println("checking whether given array is sorted or not:");
+        checksort(a);
         System.out.println("removing the duplicate elements:");
         int n = removeduplicate(a);
         for (int x = 0; x < n; x++)
             System.out.print(a[x] + " ");
         System.out.println();
         sc.close();
+    }
+
+    public static void checksort(int a[]) {
+        boolean check = false;
+        for (int u = 1; u < a.length; u++) {
+            if (a[u] < a[u - 1])
+                check = true;
+        }
+        if (check)
+            System.out.println("not sorted");
+        else
+            System.out.println("sorted");
+    }
+
+    public static void countgtx(int a[], int x) {
+        int c = 0;
+        for (int y = 0; y < a.length; y++) {
+            if (a[y] > x) {
+                c++;
+            }
+        }
+        System.out.println(c);
     }
 
     public static void lastocc(int a[], int ele) {
