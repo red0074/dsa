@@ -1,6 +1,6 @@
 package dsa.arrays;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class Basicarrays {
     public static void main(String args[]) {
