@@ -35,12 +35,25 @@ public class Basicarrays {
         int k = sc.nextInt();
         System.out.println("find the occurence of an element:");
         count(a, k);
+        // finding the last occurence of the element
+        System.out.println("finding the last occurence of the element in the array:");
+        int ele = sc.nextInt();
+        lastocc(a, ele);
         System.out.println("removing the duplicate elements:");
         int n = removeduplicate(a);
         for (int x = 0; x < n; x++)
             System.out.print(a[x] + " ");
         System.out.println();
         sc.close();
+    }
+
+    public static void lastocc(int a[], int ele) {
+        int temp = -1;
+        for (int x = 0; x < a.length; x++) {
+            if (a[x] == ele)
+                temp = x;
+        }
+        System.out.println(temp);
     }
 
     public static void count(int a[], int k) {
