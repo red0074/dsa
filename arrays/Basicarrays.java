@@ -39,7 +39,7 @@ public class Basicarrays {
     public static void copyarray(int a[]) {
         int[] arr = a;
         print(arr);
-        System.our.println();
+        System.out.println();
     }
 
     public static int removeduplicate(int a[]) {
