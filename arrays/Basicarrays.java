@@ -22,7 +22,14 @@ public class Basicarrays {
         int n = removeduplicate(a);
         for (int x = 0; x < n; x++)
             System.out.print(a[x] + " ");
+        System.out.println();
+        copyarray(a);
         sc.close();
+    }
+
+    public static void copyarray(int a[]) {
+        int[] arr = a;
+        print(arr);
     }
 
     public static int removeduplicate(int a[]) {
