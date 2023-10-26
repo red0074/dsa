@@ -23,13 +23,23 @@ public class Basicarrays {
         for (int x = 0; x < n; x++)
             System.out.print(a[x] + " ");
         System.out.println();
+        // shallow copying
         copyarray(a);
+        // deep opying
+        copyarr(a);
         sc.close();
+    }
+
+    public static void copyarr(int a[]) {
+        int copy_arr[] = a.clone();
+        print(copy_arr);
+        System.out.println();
     }
 
     public static void copyarray(int a[]) {
         int[] arr = a;
         print(arr);
+        System.our.println();
     }
 
     public static int removeduplicate(int a[]) {
